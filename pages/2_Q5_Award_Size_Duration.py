@@ -19,7 +19,7 @@ import os
 # ============================================================================
 
 st.set_page_config(
-    page_title="NIH Awards Analysis",
+    page_title="Q5 NIH Awards Analysis",
     layout="wide"
 )
 

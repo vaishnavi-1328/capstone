@@ -104,7 +104,7 @@ with col1:
 
 with col2:
     st.markdown('<div class="team-box">', unsafe_allow_html=True)
-    st.markdown("### NIH Awards Analysis")
+    st.markdown("### Q5 Award size and Duration")
     st.markdown("""
     **Deep dive into NIH funding dynamics:**
     - Award size & duration patterns
