@@ -1,0 +1,86 @@
+================================================================================
+Q3 STREAMLIT PAGE - INSTALLATION INSTRUCTIONS
+================================================================================
+
+📦 PACKAGE CONTENTS:
+   - 3_Q3_Portfolio_Evolution.py    (Streamlit page)
+   - images/                         (14 PNG files)
+
+================================================================================
+INSTALLATION STEPS:
+================================================================================
+
+1. UNZIP THE PACKAGE:
+   - Extract q3_package.zip to a temporary location
+
+2. COPY FILES TO YOUR STREAMLIT PROJECT:
+   
+   Copy the entire contents to your Streamlit "pages/" folder:
+   
+   Your project structure should look like:
+   
+   your_streamlit_project/
+   ├── Home.py                                  (your main file)
+   └── pages/
+       ├── 3_Q3_Portfolio_Evolution.py          ← Copy this file
+       └── images/                               ← Copy this entire folder
+           ├── 1764878840124_q3_2_dual_axis_count_size.png
+           ├── 1764878840125_q3_2_total_funding_line.png
+           ├── 1764878840125_q3_avg_grant_size_trends.png
+           ├── 1764878840125_q3_mechanism_distribution_stacked.png
+           ├── 1764878840125_q3_mechanism_shift_comparison.png
+           ├── 1764878840125_q3_mechanism_trends_line.png
+           ├── 1764878840126_q3_total_funding_by_institution.png
+           ├── 1764879264920_1_heatmap_top_grant_count.png
+           ├── 1764879264920_2_heatmap_top_funding.png
+           ├── 1764879264920_3_heatmap_sub_grant_count.png
+           ├── 1764879264920_4_heatmap_sub_funding.png
+           ├── 1764879264919_9_quadrant_top_grant_count.png
+           ├── 1764879264919_7_quadrant_top_funding.png
+           └── 1764879264919_8_quadrant_sub_funding.png
+
+3. RUN STREAMLIT:
+   
+   cd to your Streamlit project folder:
+   cd /path/to/your_streamlit_project
+   
+   Run:
+   streamlit run Home.py
+   
+4. VERIFY:
+   
+   - Check sidebar for "3 Q3 Portfolio Evolution"
+   - Click it and verify all 4 tabs load
+   - Confirm all 14 images display correctly
+
+================================================================================
+IMPORTANT NOTES:
+================================================================================
+
+✅ NO PATH CHANGES NEEDED!
+   - The script uses relative paths (images/ folder)
+   - As long as you keep images/ next to the .py file, it works anywhere
+
+✅ PORTABLE DESIGN:
+   - Works on any computer
+   - Works in any Streamlit project
+   - Just maintain the folder structure: pages/3_Q3_Portfolio_Evolution.py and pages/images/
+
+❌ TROUBLESHOOTING:
+
+   If images don't load:
+   1. Verify images/ folder is in pages/ directory (not root)
+   2. Check that all 14 image files are present
+   3. Ensure file names match exactly (case-sensitive)
+
+================================================================================
+PACKAGE INFO:
+================================================================================
+
+Total Files: 15 (1 Python + 14 images)
+Total Size: ~2-3 MB
+Streamlit Version: Compatible with Streamlit 1.0+
+
+Questions? Check the file structure matches the layout above!
+
+================================================================================

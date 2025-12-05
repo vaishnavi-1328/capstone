@@ -1,0 +1,160 @@
+================================================================================
+Q1 STREAMLIT PAGE - INSTALLATION INSTRUCTIONS
+================================================================================
+
+📦 PACKAGE CONTENTS:
+   - 1_Q1_Research_Themes.py         (Streamlit page)
+   - plotly_charts/                  (8 HTML files)
+
+================================================================================
+INSTALLATION STEPS:
+================================================================================
+
+1. UNZIP THE PACKAGE:
+   - Extract q1_package.zip to a temporary location
+
+2. COPY FILES TO YOUR STREAMLIT PROJECT:
+   
+   Your Streamlit project structure should be:
+   
+   your_streamlit_project/
+   ├── Home.py                       (your main file - don't touch)
+   └── pages/
+       ├── 1_Q1_Research_Themes.py   ← Copy this file here
+       └── plotly_charts/            ← Copy/merge this folder
+           ├── 01_disease_top_level_count.html
+           ├── 02_disease_top_level_funding.html
+           ├── 03_disease_sub_category_count.html
+           ├── 04_disease_sub_category_funding.html
+           ├── 08_methods_top_level_count.html
+           ├── 09_methods_top_level_funding.html
+           ├── 10_methods_sub_category_count.html
+           └── 11_methods_sub_category_funding.html
+
+3. MERGE plotly_charts/ FOLDER:
+   
+   ⚠️ IMPORTANT: If you already have a plotly_charts/ folder:
+   
+   Option A: Add Q1 charts to existing folder
+   - Copy the 8 HTML files into your existing pages/plotly_charts/
+   - No conflicts expected (Q1 uses files 01-04, 08-11)
+   
+   Option B: Create new folder if none exists
+   - Create pages/plotly_charts/
+   - Copy all 8 HTML files there
+
+4. RUN STREAMLIT:
+   
+   cd /path/to/your_streamlit_project
+   streamlit run Home.py
+   
+5. VERIFY:
+   
+   - Check sidebar for "1 Q1 Research Themes"
+   - Click it and verify 2 tabs load:
+     * Disease & Organ-System Areas (4 charts)
+     * Methods & Modalities (4 charts)
+   - Verify all 8 interactive charts display correctly
+   - Test chart interactivity (hover, zoom, pan)
+
+================================================================================
+IMPORTANT NOTES:
+================================================================================
+
+✅ NO CODE CHANGES NEEDED!
+   - The script uses relative paths: plotly_charts/ folder
+   - Works anywhere as long as folder structure is maintained
+   - No hardcoded paths to update
+
+✅ PORTABLE DESIGN:
+   - Works on any computer
+   - Works in any Streamlit project
+   - Just maintain: pages/1_Q1_Research_Themes.py and pages/plotly_charts/
+
+✅ NO CONFLICTS:
+   - Q1 uses chart files: 01-04, 08-11 (8 files)
+   - Q2 uses chart files: 05-07, 12-14 (6 files)
+   - Q3 uses different folder: images/ (not plotly_charts/)
+   - Q4 uses different folder: images/ (not plotly_charts/)
+
+❌ TROUBLESHOOTING:
+
+   If charts don't load:
+   1. Verify plotly_charts/ folder is in pages/ directory (not root)
+   2. Check that all 8 HTML files are present
+   3. Ensure file names match exactly (case-sensitive)
+   4. Check browser console for errors (F12)
+
+   If page doesn't appear in sidebar:
+   1. Make sure filename starts with a number: 1_Q1_Research_Themes.py
+   2. Verify it's in the pages/ folder (not root)
+   3. Restart Streamlit (Ctrl+C, then run again)
+
+   If you see "Plotly charts directory not found" error:
+   1. The plotly_charts/ folder must be directly inside pages/
+   2. Structure must be: pages/plotly_charts/ (not pages/charts/ or other name)
+
+================================================================================
+PACKAGE INFO:
+================================================================================
+
+Total Files: 9 (1 Python + 8 HTML charts)
+Total Size: ~2-3 MB
+Streamlit Version: Compatible with Streamlit 1.0+
+Python Version: Python 3.7+
+Dependencies: streamlit, streamlit.components (included with Streamlit)
+
+================================================================================
+WHAT THIS PAGE SHOWS:
+================================================================================
+
+Q1 answers: "What are the most common research themes funded by NIH and 
+philanthropic organizations?"
+
+Content:
+- Disease & Organ-System Areas: 5 top-level categories, 31 sub-categories
+- Methods & Modalities: 5 top-level categories, 27 sub-categories
+- Grant volume analysis (count-based)
+- Funding intensity analysis (dollar-based)
+- Strategic insights for portfolio planning
+
+Key Visualizations:
+- Interactive Plotly bar charts (hover for details)
+- Top-level theme overviews
+- Detailed sub-category breakdowns
+- Comparative funding analysis
+
+================================================================================
+MERGING WITH OTHER Q PAGES:
+================================================================================
+
+If you're also installing Q2, Q3, Q4, Q6:
+
+✅ Q1 + Q2: Share plotly_charts/ folder (Q1 uses 01-04,08-11; Q2 uses 05-07,12-14)
+✅ Q1 + Q3: Separate folders (Q1 uses plotly_charts/, Q3 uses images/)
+✅ Q1 + Q4: Separate folders (Q1 uses plotly_charts/, Q4 uses images/)
+✅ Q1 + Q6: Q6 may also use plotly_charts/ (check Q6 instructions)
+
+Final structure with all Q pages:
+pages/
+├── 1_Q1_Research_Themes.py
+├── 2_Q2_Institutional_Funding.py
+├── 3_Q3_Portfolio_Evolution.py
+├── 4_Q4_Predictive_Features.py
+├── 6_Q6_Top_Topics.py
+├── plotly_charts/          (shared by Q1, Q2, Q6)
+├── images/                 (shared by Q3, Q4)
+└── csv_tables/             (shared by Q2, Q6)
+
+================================================================================
+SUPPORT:
+================================================================================
+
+Questions? Check that:
+1. File structure matches the layout above
+2. All 8 HTML files are in plotly_charts/
+3. Streamlit is up to date: pip install --upgrade streamlit
+
+For further assistance, review the README.md or contact the package creator.
+
+================================================================================

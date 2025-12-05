@@ -1,0 +1,198 @@
+================================================================================
+Q6 STREAMLIT PAGE - INSTALLATION INSTRUCTIONS
+================================================================================
+
+📦 PACKAGE CONTENTS:
+   - 6_Q6_Top_Topics_Strengths.py    (Streamlit page)
+   - q6_images/                       (9 PNG files)
+
+================================================================================
+INSTALLATION STEPS:
+================================================================================
+
+1. UNZIP THE PACKAGE:
+   - Extract q6_package.zip to a temporary location
+
+2. COPY FILES TO YOUR STREAMLIT PROJECT:
+   
+   Your Streamlit project structure should be:
+   
+   your_streamlit_project/
+   ├── Home.py                              (your main file - don't touch)
+   └── pages/
+       ├── 6_Q6_Top_Topics_Strengths.py    ← Copy this file here
+       └── q6_images/                       ← Copy this folder
+           ├── 01_disease_top15_count.png
+           ├── 02_disease_top15_funding.png
+           ├── 03_methods_top15_count.png
+           ├── 04_methods_top15_funding.png
+           ├── 05_disease_domain_log.png
+           ├── 06_disease_domain_heatmap_log.png
+           ├── 07_methods_domain_log.png
+           ├── 08_methods_domain_heatmap_log.png
+           └── 09_corewell_portfolio_pies.png
+
+3. FOLDER STRUCTURE IS CRITICAL:
+   
+   pages/
+   ├── 6_Q6_Top_Topics_Strengths.py
+   └── q6_images/          ← Must be directly inside pages/
+       └── [9 PNG files]
+   
+   ⚠️ The q6_images/ folder must be at the same level as the .py file!
+
+4. RUN STREAMLIT:
+   
+   cd /path/to/your_streamlit_project
+   streamlit run Home.py
+   
+5. VERIFY:
+   
+   - Check sidebar for "6 Q6 Top Topics Strengths"
+   - Click it and verify 2 tabs load:
+     * Top Research Topics (4 charts)
+     * Institutional Strengths (5 charts)
+   - Verify all 9 PNG images display correctly
+   - Test tab switching
+
+================================================================================
+IMPORTANT NOTES:
+================================================================================
+
+✅ NO CODE CHANGES NEEDED!
+   - The script uses relative paths: q6_images/ folder
+   - Works anywhere as long as folder structure is maintained
+   - No hardcoded paths to update
+
+✅ PORTABLE DESIGN:
+   - Works on any computer
+   - Works in any Streamlit project
+   - Just maintain: pages/6_Q6_Top_Topics_Strengths.py and pages/q6_images/
+
+✅ SEPARATE FROM OTHER Q PAGES:
+   - Q1/Q2 use plotly_charts/ folder (14 HTML files)
+   - Q3/Q4 use images/ folder (different images)
+   - Q6 uses q6_images/ folder (9 PNG files)
+   - No conflicts!
+
+❌ TROUBLESHOOTING:
+
+   If images don't load:
+   1. Verify q6_images/ folder is in pages/ directory (not root)
+   2. Check that all 9 PNG files are present
+   3. Ensure folder name is exactly "q6_images" (case-sensitive)
+   4. Restart Streamlit (Ctrl+C, then run again)
+
+   If page doesn't appear in sidebar:
+   1. Make sure filename starts with a number: 6_Q6_Top_Topics_Strengths.py
+   2. Verify it's in the pages/ folder (not root)
+   3. Restart Streamlit
+
+   If you see "Images directory not found" error:
+   1. The q6_images/ folder must be directly inside pages/
+   2. Structure must be: pages/q6_images/ (not pages/images/ or other name)
+   3. Check spelling: q6_images not Q6_images or q6images
+
+================================================================================
+PACKAGE INFO:
+================================================================================
+
+Total Files: 10 (1 Python + 9 PNG images)
+Total Size: ~1-2 MB
+Streamlit Version: Compatible with Streamlit 1.0+
+Python Version: Python 3.7+
+Dependencies: streamlit (standard installation, no extra packages)
+
+================================================================================
+WHAT THIS PAGE SHOWS:
+================================================================================
+
+Q6 answers: "What are the top research topics being funded, and which 
+institutions excel in which research domains?"
+
+Content:
+- Top 15 disease topics ranked by grant count and funding
+- Top 15 methods topics ranked by grant count and funding
+- Institutional domain leadership with log-scale comparisons
+- Corewell Health portfolio composition analysis
+- Strategic recommendations for competitive positioning
+
+Key Visualizations:
+- 4 horizontal bar charts (Top 15 topics by disease/methods)
+- 2 grouped bar charts with log scale (institutional comparison)
+- 2 heatmaps with log scale (funding intensity)
+- 1 dual pie chart (Corewell portfolio breakdown)
+
+Key Insights:
+- Neurology and AI/ML dominate research funding
+- UPMC is 130x larger than Corewell (requires niche strategy)
+- Corewell's relative strengths in Oncology and Organ-Specific domains
+- Strategic recommendations for partnership vs. build decisions
+
+================================================================================
+MERGING WITH OTHER Q PAGES:
+================================================================================
+
+If you're also installing Q1, Q2, Q3, Q4:
+
+✅ Q6 + Q1: No conflicts (Q1 uses plotly_charts/, Q6 uses q6_images/)
+✅ Q6 + Q2: No conflicts (Q2 uses plotly_charts/ and csv_tables/, Q6 uses q6_images/)
+✅ Q6 + Q3: No conflicts (Q3 uses images/, Q6 uses q6_images/)
+✅ Q6 + Q4: No conflicts (Q4 uses images/, Q6 uses q6_images/)
+
+Final structure with all Q pages:
+pages/
+├── 1_Q1_Research_Themes.py
+├── 2_Q2_Institutional_Funding.py
+├── 3_Q3_Portfolio_Evolution.py
+├── 4_Q4_Predictive_Features.py
+├── 6_Q6_Top_Topics_Strengths.py
+├── plotly_charts/          (shared by Q1, Q2)
+├── csv_tables/             (shared by Q2)
+├── images/                 (shared by Q3, Q4)
+└── q6_images/              (used by Q6 only)
+
+================================================================================
+DATA NOTES:
+================================================================================
+
+The 9 PNG images were generated from CSV data using:
+- disease_09_table.csv (31 disease sub-categories)
+- disease_10_table.csv (31 disease funding amounts)
+- methods_09_table.csv (27 methods sub-categories)
+- methods_10_table.csv (27 methods funding amounts)
+- disease_02_table.csv (institution x disease grant counts)
+- disease_03_table.csv (institution x disease funding)
+- methods_02_table.csv (institution x methods grant counts)
+- methods_03_table.csv (institution x methods funding)
+
+Visualizations use LOG SCALE for institutional comparisons to make all 
+4 institutions visible (otherwise Corewell would be invisible at 1/130th 
+of UPMC's scale).
+
+================================================================================
+REGENERATING IMAGES (Optional):
+================================================================================
+
+If you need to regenerate the PNG images:
+
+1. Ensure you have the csv_tables/ folder with 8 CSV files
+2. Run: python3 generate_q6_visuals_improved.py
+3. Images will be created in ~/Desktop/q6_visuals_final/
+4. Copy to pages/q6_images/
+
+Required Python packages: pandas, matplotlib, seaborn, numpy
+
+================================================================================
+SUPPORT:
+================================================================================
+
+Questions? Check that:
+1. File structure matches the layout above
+2. All 9 PNG files are in q6_images/
+3. q6_images/ folder is directly inside pages/
+4. Streamlit is up to date: pip install --upgrade streamlit
+
+For further assistance, review the README.md or contact the package creator.
+
+================================================================================

@@ -1,0 +1,245 @@
+================================================================================
+Q2 STREAMLIT PAGE - INSTALLATION INSTRUCTIONS
+================================================================================
+
+📦 PACKAGE CONTENTS:
+   - 2_Q2_Institutional_Funding.py   (Streamlit page)
+   - plotly_charts/                  (6 HTML files)
+   - csv_tables/                     (4 CSV files)
+
+================================================================================
+INSTALLATION STEPS:
+================================================================================
+
+1. UNZIP THE PACKAGE:
+   - Extract q2_package.zip to a temporary location
+
+2. COPY FILES TO YOUR STREAMLIT PROJECT:
+   
+   Your Streamlit project structure should be:
+   
+   your_streamlit_project/
+   ├── Home.py                          (your main file - don't touch)
+   └── pages/
+       ├── 2_Q2_Institutional_Funding.py  ← Copy this file here
+       ├── plotly_charts/                 ← Copy/merge this folder
+       │   ├── 05_disease_institution_count_mix.html
+       │   ├── 06_disease_institution_award_mix.html
+       │   ├── 07_disease_bubble_scatter_REAL.html
+       │   ├── 12_methods_institution_count_mix.html
+       │   ├── 13_methods_institution_award_mix.html
+       │   └── 14_methods_bubble_scatter_REAL.html
+       └── csv_tables/                    ← Copy/merge this folder
+           ├── disease_03_table.csv
+           ├── disease_06_table.csv
+           ├── methods_03_table.csv
+           └── methods_06_table.csv
+
+3. MERGE plotly_charts/ FOLDER:
+   
+   ⚠️ IMPORTANT: If you already have a plotly_charts/ folder (from Q1):
+   
+   - ADD the 6 Q2 HTML files to your existing pages/plotly_charts/
+   - Q1 uses files: 01-04, 08-11
+   - Q2 uses files: 05-07, 12-14
+   - No conflicts - different file numbers
+   
+   If no plotly_charts/ folder exists:
+   - Create pages/plotly_charts/
+   - Copy all 6 HTML files there
+
+4. MERGE csv_tables/ FOLDER:
+   
+   ⚠️ IMPORTANT: If you already have a csv_tables/ folder:
+   
+   - ADD the 4 Q2 CSV files to your existing pages/csv_tables/
+   - Q2 needs: disease_03, disease_06, methods_03, methods_06
+   - Other CSV files (if present) won't conflict
+   
+   If no csv_tables/ folder exists:
+   - Create pages/csv_tables/
+   - Copy all 4 CSV files there
+
+5. RUN STREAMLIT:
+   
+   cd /path/to/your_streamlit_project
+   streamlit run Home.py
+   
+6. VERIFY:
+   
+   - Check sidebar for "2 Q2 Institutional Funding"
+   - Click it and verify 3 tabs load:
+     * Disease Domain Funding (3 charts + 2 tables)
+     * Methods Domain Funding (3 charts + 2 tables)
+     * Overall Rankings (tables + analysis)
+   - Verify all 6 interactive charts display correctly
+   - Verify all 4 CSV tables display correctly
+   - Test chart interactivity (hover, zoom, pan)
+
+================================================================================
+IMPORTANT NOTES:
+================================================================================
+
+✅ NO CODE CHANGES NEEDED!
+   - The script uses relative paths: plotly_charts/ and csv_tables/ folders
+   - Works anywhere as long as folder structure is maintained
+   - No hardcoded paths to update
+
+✅ PORTABLE DESIGN:
+   - Works on any computer
+   - Works in any Streamlit project
+   - Just maintain: pages/2_Q2_Institutional_Funding.py, pages/plotly_charts/, 
+     and pages/csv_tables/
+
+✅ COMPATIBLE WITH Q1:
+   - Q1 and Q2 share the same plotly_charts/ folder
+   - Q1 uses charts: 01-04, 08-11 (8 files)
+   - Q2 uses charts: 05-07, 12-14 (6 files)
+   - Total: 14 HTML files in plotly_charts/ if both installed
+
+✅ CSV TABLES EXPLAINED:
+   - disease_03_table.csv: Institution funding by disease domain ($M)
+   - disease_06_table.csv: Institution totals & metrics (disease)
+   - methods_03_table.csv: Institution funding by methods domain ($M)
+   - methods_06_table.csv: Institution totals & metrics (methods)
+
+❌ TROUBLESHOOTING:
+
+   If charts don't load:
+   1. Verify plotly_charts/ folder is in pages/ directory (not root)
+   2. Check that all 6 HTML files are present (05-07, 12-14)
+   3. Ensure file names match exactly (case-sensitive)
+   4. Check browser console for errors (F12)
+
+   If tables don't load:
+   1. Verify csv_tables/ folder is in pages/ directory (not root)
+   2. Check that all 4 CSV files are present
+   3. Ensure file names match exactly (case-sensitive)
+   4. Check for error message: "Table not found: [filename]"
+
+   If page doesn't appear in sidebar:
+   1. Make sure filename starts with a number: 2_Q2_Institutional_Funding.py
+   2. Verify it's in the pages/ folder (not root)
+   3. Restart Streamlit (Ctrl+C, then run again)
+
+   If you see "directory not found" errors:
+   1. The plotly_charts/ and csv_tables/ folders must be directly inside pages/
+   2. Structure must be: pages/plotly_charts/ and pages/csv_tables/
+   3. Not: pages/charts/, pages/data/, or any other name
+
+================================================================================
+PACKAGE INFO:
+================================================================================
+
+Total Files: 11 (1 Python + 6 HTML charts + 4 CSV tables)
+Total Size: ~2-3 MB
+Streamlit Version: Compatible with Streamlit 1.0+
+Python Version: Python 3.7+
+Dependencies: streamlit, streamlit.components, pandas (standard with Streamlit)
+
+================================================================================
+WHAT THIS PAGE SHOWS:
+================================================================================
+
+Q2 answers: "Which institutions receive the most NIH and foundation funding, 
+and in what research domains?"
+
+Content:
+- 4 peer institutions compared: UPMC, Kaiser Permanente, Henry Ford, Corewell
+- Disease domain funding comparison (5 categories)
+- Methods domain funding comparison (5 categories)
+- Institutional rankings and performance metrics
+- Strategic competitive analysis
+
+Key Visualizations:
+- Stacked bar charts showing portfolio composition (% mix)
+- Heatmaps showing absolute funding amounts ($M)
+- Interactive data tables for detailed comparison
+- Institutional performance metrics
+
+Key Insights:
+- UPMC dominates with $10.4B total funding (130x larger than Corewell)
+- Each institution has unique domain strengths
+- Corewell's strategic positioning and niche opportunities identified
+- Competitive recommendations for growth
+
+================================================================================
+MERGING WITH OTHER Q PAGES:
+================================================================================
+
+If you're also installing Q1, Q3, Q4, Q6:
+
+✅ Q1 + Q2: Share plotly_charts/ folder
+   - Q1 charts: 01-04, 08-11 (8 files)
+   - Q2 charts: 05-07, 12-14 (6 files)
+   - Total: 14 HTML files in plotly_charts/
+
+✅ Q2 + Q3: Separate folders
+   - Q2 uses plotly_charts/ and csv_tables/
+   - Q3 uses images/ folder
+
+✅ Q2 + Q4: Separate folders
+   - Q2 uses plotly_charts/ and csv_tables/
+   - Q4 uses images/ folder
+
+✅ Q2 + Q6: May share csv_tables/ folder
+   - Q2 uses 4 specific CSV files
+   - Q6 may use additional CSV files from same folder
+   - Check Q6 instructions for details
+
+Final structure with Q1 + Q2:
+pages/
+├── 1_Q1_Research_Themes.py
+├── 2_Q2_Institutional_Funding.py
+├── plotly_charts/              (14 HTML files total)
+│   ├── 01-04, 08-11           (Q1 charts)
+│   └── 05-07, 12-14           (Q2 charts)
+└── csv_tables/                 (4 CSV files)
+    ├── disease_03_table.csv
+    ├── disease_06_table.csv
+    ├── methods_03_table.csv
+    └── methods_06_table.csv
+
+================================================================================
+DATA USAGE NOTES:
+================================================================================
+
+The CSV tables contain real institutional data:
+
+Institutions Covered:
+1. University of Pittsburgh (UPMC)
+2. Kaiser Permanente
+3. Henry Ford Health
+4. Corewell Health
+
+Disease Domains (5):
+- Infectious & Immune Diseases
+- Neurological, Mental & Behavioral Health
+- Cardiometabolic & Endocrine Systems
+- Oncology & Genetic Diseases
+- Organ-Specific Systems & Developmental Health
+
+Methods Domains (5):
+- Molecular & Cellular Biology
+- Omics & Data Science
+- Diagnostics, Therapeutics & Interventions
+- Population & Environmental Health
+- Cross-Cutting & Enabling Areas
+
+You can export these tables for further analysis in Excel, Tableau, etc.
+
+================================================================================
+SUPPORT:
+================================================================================
+
+Questions? Check that:
+1. File structure matches the layout above
+2. All 6 HTML files are in plotly_charts/
+3. All 4 CSV files are in csv_tables/
+4. Both folders are directly inside pages/ (not nested deeper)
+5. Streamlit and pandas are up to date:
+   pip install --upgrade streamlit pandas
+
+For further assistance, review the README.md or contact the package creator.
+
+================================================================================
